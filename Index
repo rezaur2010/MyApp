@@ -1,1 +1,46 @@
-T
+
+
+
+
+// describe("Test that the button is cleckable once the Ajex loader complets loading  ", () => {
+    
+       
+//        it('Attempt to click the button asap',  () => {
+//         browser.url ('/Ajax-Loader/index.html')
+//         browser.click('#button1');
+        
+//        })
+   
+//        it('Attempt to click after 7 second the button asap',  () => {
+//         browser.url ('/Ajax-Loader/index.html')
+//         this.timeout(20000);
+//         //browser.setTimeouts({'implicit':20000})
+//         browser.pause(7000)
+//         browser.click('#button1');
+//         browser.pause(7000)
+        
+//        })
+
+//     })
+    
+describe("Test that the button is clickable once the Ajax loader completes loading ", function() {
+// 	it("Attempt to click the button asap", (done) => {
+
+// 		browser.url('/Ajax-Loader/index.html');
+// 		browser.click('#button1');
+
+// //npm test -- --spec=tests/sample.js
+			
+// 		});
+
+
+		it("Attempt to click the button after 7 secound", function(done) {
+            let btn = $('#button1');
+                browser.url('/Ajax-Loader/index.html');
+               // $${}.waitForExist(5000);
+                $('#loader').waitUntil(50000, 'still display');
+               // browser.click(btn);
+		
+	});
+});
+// loader
